@@ -13,7 +13,7 @@ def status():
     return "C'est dohi"
 
 def start_consumer():
-    url = os.environ.get('CLOUDAMQP_URL', 'amqp://deploie:deploie@188.166.104.18:5672')
+    url = os.environ.get('CLOUDAMQP_URL', 'urlrabittmq')
     params = pika.URLParameters(url)
     try:
         connection = pika.BlockingConnection(params)
